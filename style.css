@@ -7,12 +7,21 @@
  title: #8380E6 [lylac]
  links: #B080E6 [light-purple]
  float: #211B25 [grey-purple]
+ 
+ mountains:
+ #332b39
+ #2f2735
+ #29232d
+ #3f3349
+ #221d25
+ #181612
+ 
  */
 
 /* ~~~ colours ~~~ */
 
 body {
-	background: #2E2336; /* sky-light */
+	background: #181612;
 }
 
 #background0 {/* sky-dark -> sky-light */
@@ -33,17 +42,20 @@ body {
 
 #menu {
 	background: #211B25;
+	background-color:rgba(33,27,37,0.6);
 }
-a:link, a:visited {
+a {
 	color: #B080E6;
-	text-decoration: none
-}
-a:active, a:hover {
-	color: #B080E6;
-	text-decoration: underline;
 }
 
 /* ~~~ layout ~~~ */
+
+a:link, a:visited {
+	text-decoration: none
+}
+a:active, a:hover {
+	text-decoration: underline;
+}
 
 body {
 	margin: 0;
@@ -52,7 +64,7 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-#background0, #background1 {
+#background0, #background1, #mountains {
 	position: absolute;
 	width: 100%;
 	z-index: -1;
@@ -60,17 +72,23 @@ body {
 
 #background0 {
 	top: 0;
-	height: 70%;
+	height: 45%;
 }
 
 #background1 {
-	top: 80%;
-	height: 20%;
+	top: 90%;
+	height: 10%;
 	margin: -1px;
 }
 
+#mountains {
+	left: 0;
+	top: 0;
+	height: 89%;
+}
+
 #title {
-	padding: 2em;
+	padding: 3em;
 }
 
 #title h1 {
@@ -86,7 +104,6 @@ body {
 	display: inline-block;
 	margin: 0 auto; /* Make div centre. */
 	border-radius: 10px;
-	opacity: 0.9;
 	text-align: center;
 }
 
