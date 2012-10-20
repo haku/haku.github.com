@@ -1,86 +1,98 @@
 /*
-sky-dark:  #000000 [black]
-sky-light: #2E2336 [dark-purple]
-horizon:   #294166
-sea-light: #1A2940
-sea-dark:  #000000 [black]
-title: #8380E6 [lylac]
-links: #B080E6 [light-purple]
-float: #211B25 [grey-purple]
-*/
+ sky-dark:  #000000 [black]
+ sky-light: #2E2336 [dark-purple]
+ horizon:   #294166
+ sea-light: #1A2940
+ sea-dark:  #000000 [black]
+ title: #8380E6 [lylac]
+ links: #B080E6 [light-purple]
+ float: #211B25 [grey-purple]
+ */
 
 /* ~~~ colours ~~~ */
 
-body { background: #2E2336; /* sky-light */ }
-
-#background0 { /* sky-dark -> sky-light */
- background-image:-moz-linear-gradient(top, #000000 0%, #2E2336 100%);
- background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #000000), color-stop(100%, #2E2336));
- background-image:linear-gradient(top, #000000 0%, #2E2336 100%);
-}
-#background1 { /* horizon, sea-light -> sea-dark */
- border-top: solid 1px #294166;
- background-image:-moz-linear-gradient(top, #1A2940 0%, #000000 100%);
- background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #1A2940), color-stop(100%, #000000));
- background-image:linear-gradient(top, #1A2940 0%, #000000 100%);
+body {
+	background: #2E2336; /* sky-light */
 }
 
-#title h1 { color: #8380E6 }
+#background0 {/* sky-dark -> sky-light */
+	background-image: -moz-linear-gradient(top, #000000 0%, #2E2336 100%);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #000000), color-stop(100%, #2E2336));
+	background-image: linear-gradient(top, #000000 0%, #2E2336 100%);
+}
+#background1 {/* horizon, sea-light -> sea-dark */
+	border-top: solid 1px #294166;
+	background-image: -moz-linear-gradient(top, #1A2940 0%, #000000 100%);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #1A2940), color-stop(100%, #000000));
+	background-image: linear-gradient(top, #1A2940 0%, #000000 100%);
+}
 
-#menu { background: #211B25; }
-a:link, a:visited { color: #B080E6; text-decoration: none }
-a:active, a:hover { color: #B080E6; text-decoration: underline; }
+#title h1 {
+	color: #8380E6
+}
+
+#menu {
+	background: #211B25;
+}
+a:link, a:visited {
+	color: #B080E6;
+	text-decoration: none
+}
+a:active, a:hover {
+	color: #B080E6;
+	text-decoration: underline;
+}
 
 /* ~~~ layout ~~~ */
 
 body {
- margin: 0;
- padding: 0;
- text-align: center;
- font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Arial, sans-serif;
 }
 
 #background0, #background1 {
- position: absolute;
- width: 100%;
- z-index: -1;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
 }
 
 #background0 {
- top: 0;
- height: 70%;
+	top: 0;
+	height: 70%;
 }
 
 #background1 {
- top: 80%;
- height: 20%;
- margin: -1px;
+	top: 80%;
+	height: 20%;
+	margin: -1px;
 }
 
 #title {
- padding: 2em;
+	padding: 2em;
 }
 
 #title h1 {
- text-align: center;
- font-size: 2em;
- letter-spacing: 0.1em;
- margin-top: 0.5em;
- font-weight: normal;
+	text-align: center;
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	margin-top: 0.5em;
+	font-weight: normal;
 }
 
 #menu {
- padding: 0.25em 1em;
- display: inline-block;
- margin: 0 auto; /* Make div centre. */
- border-radius: 10px;
- opacity: 0.9;
- text-align: center;
+	padding: 0.25em 1em;
+	display: inline-block;
+	margin: 0 auto; /* Make div centre. */
+	border-radius: 10px;
+	opacity: 0.9;
+	text-align: center;
 }
 
 #menu a {
- display: block;
- margin: 0.5em;
- font-size: 1.5em;
+	display: block;
+	margin: 0.5em;
+	font-size: 1.5em;
 }
 
