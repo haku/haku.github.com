@@ -1,133 +1,56 @@
-/*
- sky-dark:  #000000 [black]
- sky-light: #2E2336 [dark-purple]
- horizon:   #294166
- sea-light: #1A2940
- sea-dark:  #000000 [black]
- title: #8380E6 [lylac]
- links: #B080E6 [light-purple]
- float: #211B25 [grey-purple]
-
- mountains:
- #332b39
- #2f2735
- #29232d
- #3f3349
- #221d25
- #181612
-
- */
-
-/* ~~~ colours ~~~ */
-
+/* colours */
 body {
-	background: #181612;
+  background: #bca9ff;
 }
-
-#background0 {/* sky-dark -> sky-light */
-	background-image: -moz-linear-gradient(top, #000000 0%, #2E2336 100%);
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #000000), color-stop(100%, #2E2336));
-	background-image: linear-gradient(top, #000000 0%, #2E2336 100%);
+#bg0 {
+  background-image: linear-gradient(to bottom, #000000 0%, #bca9ff 100%);
 }
-#background1 {/* horizon, sea-light -> sea-dark */
-	border-top: solid 1px #294166;
-	background-image: -moz-linear-gradient(top, #1A2940 0%, #000000 100%);
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #1A2940), color-stop(100%, #000000));
-	background-image: linear-gradient(top, #1A2940 0%, #000000 100%);
+#bg1 {
+  background-image: linear-gradient(to bottom, #71438C 0%, #000000 100%);
 }
-
-#mountains .m6 {
-	fill: #332b39;
+/* layout */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
-#mountains .m5 {
-	fill: #2f2735;
+#bg0, #bg1 {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
-#mountains .m4 {
-	fill: #29232d;
+#bg0 {
+  top: 0;
+  height: 90%;
 }
-#mountains .m3 {
-	fill: #3f3349;
+#bg1 {
+  top: 90%;
+  height: 10%;
 }
-#mountains .m2 {
-	fill: #221d25;
-}
-#mountains .m1 {
-	fill: #181612;
-}
-
-#title h1 {
-	color: #8380E6
-}
-#menu {
-	background: #211B25;
-	background-color: rgba(33,27,37,0.6);
-}
-a {
-	color: #B080E6;
-}
-
-/* ~~~ layout ~~~ */
-
+/* card */
 a:link, a:visited {
-	text-decoration: none
+  text-decoration: none
 }
 a:active, a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
-
-body {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-family: Arial, sans-serif;
+#card {
+  padding: 1em;
+  display: inline-block;
+  margin: 15% auto; /* Make div centre. */
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
 }
-
-#background0, #background1, #mountains {
-	position: absolute;
-	width: 100%;
-	z-index: -1;
+#card .faerie {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
 }
-
-#background0 {
-	top: 0;
-	height: 45%;
+#card a {
+  display: block;
+  margin: 1em;
+  font-size: 1.5em;
+  color: #71438C;
 }
-
-#background1 {
-	top: 90%;
-	height: 10%;
-	margin: -1px;
-}
-
-#mountains {
-	left: 0;
-	top: 0;
-	height: 89%;
-}
-
-#title {
-	padding: 3em;
-}
-
-#title h1 {
-	text-align: center;
-	font-size: 2em;
-	letter-spacing: 0.1em;
-	margin-top: 0.5em;
-	font-weight: normal;
-}
-
-#menu {
-	padding: 0.25em 1em;
-	display: inline-block;
-	margin: 0 auto; /* Make div centre. */
-	border-radius: 10px;
-	text-align: center;
-}
-
-#menu a {
-	display: block;
-	margin: 0.5em;
-	font-size: 1.5em;
-}
-
